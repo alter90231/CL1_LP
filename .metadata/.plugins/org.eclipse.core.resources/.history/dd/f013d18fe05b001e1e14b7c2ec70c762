@@ -1,0 +1,16 @@
+package model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/Empleado")
+public class EmpleadoControlador {
+	@Autowired
+	private EmpleadoRepository empleadoRepository;
+	
+	@PostMapping("/")
+	public Empleado registrarEmpleado(@RequestBody Empleado empleado) {
+		return empleadoRepository.save(empleado);
+	}
+}

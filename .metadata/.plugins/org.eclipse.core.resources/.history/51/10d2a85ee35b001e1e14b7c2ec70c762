@@ -1,0 +1,44 @@
+package model;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/Empleado")
+public class EmpleadoControlador {
+	@Autowired
+	private EmpleadoRepository empleadoRepository;
+	
+	@PostMapping("/")
+	public Empleado registrarEmpleado(@RequestBody Empleado empleado) {
+		return empleadoRepository.save(empleado);
+	}
+	
+	@GetMapping("/ListarEmpleado")
+	public List<Empleado> listarEmpleado() {
+		return empleadoRepository.findAll();
+	}
+	
+	@GetMapping("/{id}")
+    public Empleado obtenerEmpleadoPorId(@PathVariable Long id) {
+        return empleadoRepository.findById(id)
+                .orElseThrow();
+    }
+	
+	@PutMapping("/{id}")
+    public Empleado actualizarEmpleado(@PathVariable Long id, @RequestBody Empleado empleadoActualizado) {
+        Empleado empleado = empleadoRepository.findById(id)
+                .orElseThrow();
+        return empleadoRepository.save(empleado);
+	}
+	
+	@DeleteMapping("/{id}")
+    public void eliminarEmpleado(@PathVariable Long id) {
+        Empleado empleado = empleadoRepository.findById(id)
+                .orElseThrow();
+
+        empleadoRepository.delete(empleado);
+    }
+}

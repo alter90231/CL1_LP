@@ -1,0 +1,33 @@
+package model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import model.Empleado;
+import model.EmpleadoRepository;
+
+@Controller
+public class EmpleadoControlador {
+	
+	@Autowired
+	private EmpleadoRepository empleadoRepository;
+	
+	@GetMapping("/registrar")
+	public String registrarEmpleado(@RequestParam(name= "name", required=false, defaultValue = "Subject") String name, Model model) {
+		Empleado emp = new Empleado();
+		emp.setIdEmpleado();
+		emp.
+	}
+		
+	
+	@GetMapping("/listar")
+	public  String listarEmpleado(Model model) {
+		model.addAttribute("ltsEmpleado", empleadoRepository.findAll());
+		return "listado";
+	}
+	
+	
+}

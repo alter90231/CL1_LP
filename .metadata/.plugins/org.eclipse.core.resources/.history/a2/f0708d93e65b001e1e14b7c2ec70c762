@@ -1,0 +1,23 @@
+package model;
+
+import java.util.List;
+import org.hibernate.mapping.List;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import model.EmpleadoControlador;
+import model.Empleado;
+
+@Controller
+public class EmpleadoInterfaces {
+
+	
+	
+	@GetMapping("/interfaz-empleados")
+	public String mostrarInterfazEmpleados(Model model) {
+		List<Empleado> empleados = 
+		model.addAttribute("empleados", empleados);		
+		return "interfaz-empleados";
+	}
+	
+}

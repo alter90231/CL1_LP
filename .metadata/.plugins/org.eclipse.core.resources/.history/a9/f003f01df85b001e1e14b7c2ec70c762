@@ -1,0 +1,81 @@
+package model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "empleado")
+public class Empleado {
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private String idEmpleado;
+	private String Apellidos;
+	private String Nombres;
+	private int Edad;
+	private String Sexo;
+	private int SALARIO;
+
+	public Empleado() {
+		
+	}
+	public Empleado(String idEmpleado, String apellidos, String nombres, int edad, String sexo, int salario) {
+		this.idEmpleado = idEmpleado;
+		this.Apellidos = apellidos;
+		this.Nombres = nombres;
+		this.Edad = edad;
+		this.Sexo = sexo;
+		this.SALARIO = salario;
+	}
+
+	public String getIdEmpleado() {
+		return idEmpleado;
+	}
+
+	public void setIdEmpleado(String idEmpleado) {
+		this.idEmpleado = idEmpleado;
+	}
+
+	public String getApellidos() {
+		return Apellidos;
+	}
+
+	public void setApellidos(String apellidos) {
+		this.Apellidos = apellidos;
+	}
+
+	public String getNombres() {
+		return Nombres;
+	}
+
+	public void setNombres(String nombres) {
+		this.Nombres = nombres;
+	}
+
+	public int getEdad() {
+		return Edad;
+	}
+
+	public void setEdad(int edad) {
+		this.Edad = edad;
+	}
+
+	public String getSexo() {
+		return Sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.Sexo = sexo;
+	}
+
+	public int getSalario() {
+		return SALARIO;
+	}
+
+	public void setSalario(int salario) {
+		this.SALARIO = salario;
+	}
+
+}

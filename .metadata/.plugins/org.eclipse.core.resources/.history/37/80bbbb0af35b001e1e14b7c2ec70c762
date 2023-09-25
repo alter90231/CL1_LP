@@ -1,0 +1,10 @@
+package Interfaz;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import model.Empleado;
+
+public interface Interfaz extends CrudRepository<Empleado, Integer> {
+
+}

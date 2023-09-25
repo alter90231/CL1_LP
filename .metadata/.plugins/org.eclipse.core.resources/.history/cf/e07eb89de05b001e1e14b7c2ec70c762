@@ -1,0 +1,13 @@
+package model;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+import model.Empleado;
+
+
+@Repository
+public interface EmpleadoRepository{
+
+	Empleado save(Empleado empleado); 
+
+}

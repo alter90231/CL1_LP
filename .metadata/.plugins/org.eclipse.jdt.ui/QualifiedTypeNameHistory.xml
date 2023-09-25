@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.hibernate.mapping.List"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="model.EmpleadoControlador"/>
+    <fullyQualifiedTypeName name="model.EmpleadoRepository"/>
+    <fullyQualifiedTypeName name="ch.qos.logback.core.model.Model"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowire"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="interfacesservice.EmpleadoService"/>
+    <fullyQualifiedTypeName name="Controlador.EmpleadoControlador"/>
+    <fullyQualifiedTypeName name="model.Empleado"/>
+    <fullyQualifiedTypeName name="Interfaz.Interfaz"/>
+</qualifiedTypeNameHistroy>
